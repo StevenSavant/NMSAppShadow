@@ -12,8 +12,6 @@ proxy:
 phases:
   install:
     nodejs: 10, nodejs: 12
-    commands:
-      - yum install nodejs
   pre_build:
     commands:
       - cd nms-app-shadow
