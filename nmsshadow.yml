@@ -18,7 +18,6 @@ phases:
       - cd nms-app-shadow
       - npm install
   build:
-    run-as: Linux-user-name
     commands:
       - npm build
 
