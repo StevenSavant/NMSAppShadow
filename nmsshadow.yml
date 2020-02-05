@@ -23,7 +23,5 @@ phases:
 
 artifacts:
   files:
-    - build/**/*
-  name: artifact-name
-  discard-paths: yes
-  base-directory: build
+    - nms-app-shadow/build/**/*
+  name: nmsapp-artifacts
