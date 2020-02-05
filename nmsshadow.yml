@@ -1,0 +1,31 @@
+version: 0.2
+
+run-as: root
+
+env:
+  git-credential-helper: yes
+
+proxy:
+    upload-artifacts: yes
+    logs: yes
+            
+phases:
+  install:
+    nodejs: 10, nodejs: 12
+    commands:
+      - yum install nodejs
+  pre_build:
+    commands:
+      - cd nms-app-shadow
+      - npm install
+  build:
+    run-as: Linux-user-name
+    commands:
+      - npm build
+
+artifacts:
+  files:
+    - build/**/*
+  name: artifact-name
+  discard-paths: yes
+  base-directory: build
