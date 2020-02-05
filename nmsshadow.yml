@@ -12,9 +12,8 @@ proxy:
 phases:
   install:
     runtime-versions:
-        runtime: 
-            nodejs: 10
-            nodejs: 12
+        nodejs: 10
+        nodejs: 12
   pre_build:
     commands:
       - cd nms-app-shadow
